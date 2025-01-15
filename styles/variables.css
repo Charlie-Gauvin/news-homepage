@@ -1,0 +1,27 @@
+:root {
+    /* Couleurs primaires */
+    --color-primary-orange: hsl(35, 77%, 62%);
+    --color-primary-red: hsl(5, 85%, 63%);
+  
+    /* Couleurs neutres */
+    --color-neutral-off-white: hsl(36, 100%, 99%);
+    --color-neutral-grayish-blue: hsl(233, 8%, 79%);
+    --color-neutral-dark-grayish-blue: hsl(236, 13%, 42%);
+    --color-neutral-very-dark-blue: hsl(240, 100%, 5%);
+  
+    /* Typographie */
+    --font-family: 'Inter', sans-serif;
+    --font-size-paragraph: 15px;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+  
+    /* Espacements */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+  
+    /* Breakpoints */
+    --breakpoint-mobile: 375px;
+    --breakpoint-desktop: 1440px;
+  }
