@@ -3,25 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./assets/images/logo.svg"
     />
-
-    <title>Frontend Mentor | News homepage</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <title>News homepage</title>
+    <meta name="description" content="Stay updated with the latest news on various topics including technology, sports, entertainment, and more.">
     <style>
       .attribution {
         font-size: 11px;
         text-align: center;
+        padding-bottom: 15px;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -36,7 +33,16 @@
           src="./assets/images/logo.svg"
           alt="Frontend Mentor logo"
         />
-        <ul class="header__menu">
+        <!-- BURGER MENU BTN -->
+        <button class="header__menu-button" id="menuButton">
+          <img
+            src="./assets/images/icon-menu.svg"
+            alt="Menu burger"
+            id="menuIcon"
+          />
+        </button>
+
+        <ul class="header__menu" id="navBar">
           <li class="header__menu-item">
             <a class="header__menu-link" href="#">Home</a>
           </li>
@@ -56,11 +62,18 @@
       </nav>
     </header>
     <main>
-      <!-- Article 1 -->
+      <!-- BLOCK - 1 -->
       <section class="content__article">
         <div class="content__article-image">
           <img
             src="./assets/images/image-web-3-desktop.jpg"
+            alt="image-main-page"
+            class="content__article-image-img"
+          />
+        </div>
+        <div class="content__article_image-mobile">
+          <img
+            src="./assets/images/image-web-3-mobile.jpg"
             alt="image-main-page"
             class="content__article-image-img"
           />
@@ -70,15 +83,15 @@
           <div class="content__article-text-container">
             <p class="content__article-paragraph">
               We dive into the next evolution of the web that claims to put the
-              power of the platforms back into the hands of the people. But is it
-              really fulfilling its promise?
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
             </p>
             <button class="content__article-button">READ MORE</button>
           </div>
         </div>
       </section>
 
-      <!-- Article 2 -->
+      <!-- BLOCK - 2 -->
       <section class="content__aside">
         <h2 class="content__aside-title">New</h2>
         <h3 class="content__aside-subtitle">Hydrogen VS Electric Cars</h3>
@@ -99,41 +112,53 @@
         </p>
       </section>
 
+      <!-- BLOCK - 3 -->
       <section class="content__news">
         <!-- News 1 -->
         <div class="content__news-item">
-          <img src="./assets/images/image-retro-pcs.jpg" alt="" class="content__news-image">
+          <img
+            src="./assets/images/image-retro-pcs.jpg"
+            alt=""
+            class="content__news-image"
+          />
           <div class="content__news-item-content">
-
             <span class="content__news-item-number">01</span>
             <h2 class="content__news-item-title">Reviving Retro PCs</h2>
-            <p class="content__news-item-description">What happens when old PCs are given modern upgrades?</p>
+            <p class="content__news-item-description">
+              What happens when old PCs are given modern upgrades?
+            </p>
           </div>
         </div>
         <!-- News 2 -->
         <div class="content__news-item">
-          <img src="./assets/images/image-top-laptops.jpg" alt="content__news-item-image">
+          <img
+            src="./assets/images/image-top-laptops.jpg"
+            alt="content__news-item-image"
+          />
           <div class="content__news-item-content">
-
             <span class="content__news-item-number">02</span>
             <h2 class="content__news-item-title">Top 10 Laptops of 2022</h2>
-            <p class="content__news-item-description">Our best picks for various needs and budgets.</p>
+            <p class="content__news-item-description">
+              Our best picks for various needs and budgets.
+            </p>
           </div>
         </div>
-         <!-- News 3 -->
+        <!-- News 3 -->
         <div class="content__news-item">
-          <img src="./assets/images/image-gaming-growth.jpg" alt="content__news-item-image">
+          <img
+            src="./assets/images/image-gaming-growth.jpg"
+            alt="content__news-item-image"
+          />
           <div class="content__news-item-content">
-
             <span class="content__news-item-number">03</span>
             <h2 class="content__news-item-title">The Growth of Gaming</h2>
-            <p class="content__news-item-description">How the pandemic has sparked fresh opportunities</p>
+            <p class="content__news-item-description">
+              How the pandemic has sparked fresh opportunities
+            </p>
           </div>
         </div>
-    </section>
-
+      </section>
     </main>
-
 
     <div class="attribution">
       Challenge by
@@ -141,5 +166,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Charlie Gauvin</a>.
     </div>
+    <div id="overlay"></div>
+    <script src="./index.js" defer></script>
   </body>
 </html>
